@@ -1,0 +1,338 @@
+/* ********************* SCROLL **********************/
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+/* ********************* PAGE **********************/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.page-bckgrnd-edit /* active below at popup sect. */
+{
+    background: url(Img/Registration_bckgrnd.jpg);
+    alt: 'background image';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.page-bckgrnd-reg
+{
+    background: url(Img/user_profile_bckgrnd.jpg);
+    alt: 'background image';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.avatar
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 110px;
+
+}
+h1
+{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox
+{
+   width: 320px;
+   height: 840px;
+   background: #000;
+   color: rgb(255, 255, 255);
+   top: 50%;
+   left: 50%;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   box-sizing: border-box;
+   padding: 70px 30px;
+   margin-top: 160px;
+   border-radius: 30px;
+
+}
+.loginbox p
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
+}
+.loginbox input
+{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+.loginbox input[type="email"], input[type="password"], input[type="text"], input[type="tel"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #dd0606;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-bottom: 4px;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+.loginbox input[type="button"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1d3ce8;
+    color:white;
+    font-size: 18px;
+    border-radius: 20px;
+     margin-bottom: 4px;
+}
+.loginbox input[type="button"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+.loginbox a:hover{
+    color: #ffc107
+}
+
+.loginbox.active
+{
+    filter: blur(5px);
+}
+.page-bckgrnd-reg.active /* shadow effect for pop up*/
+{
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(Img/user_profile_bckgrnd.jpg);
+    alt: 'background image';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.page-bckgrnd-edit.active
+{
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.5) ), url(Img/Registration_bckgrnd.jpg);
+    alt: 'background image';
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.html-pop {
+  font-family: "Helvetica Neue", sans-serif;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.popup-overlay {
+  /*Hides pop-up when there is no "active" class*/
+  visibility: hidden;
+  position: absolute;
+  background: linear-gradient( rgba(0, 50, 50, 1), rgba(0, 0, 0, 1) );
+  border: 3px solid  #445decbd;;
+  border-radius: 30px;
+  width: 30%;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-overlay.active {
+  /*displays pop-up when "active" class is present*/
+  visibility: visible;
+  text-align: center;
+}
+
+.popup-content {
+  /*Hides pop-up content when there is no "active" class */
+  visibility: hidden;
+}
+
+.popup-content.active {
+  /*Shows pop-up content when "active" class is present */
+  visibility: visible;
+}
+.popup-overlay.active {
+  /*displays pop-up when "active" class is present*/
+  visibility: visible;
+  text-align: center;
+}
+
+/* Delete account window */
+.popup-overlay_del {
+  /*Hides pop-up when there is no "active" class*/
+  visibility: hidden;
+  position: absolute;
+  background: linear-gradient( rgba(0, 50, 50, 1), rgba(0, 0, 0, 1) );
+  border: 3px solid  #445decbd;;
+  border-radius: 30px;
+  width: 30%;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup-overlay_del.active {
+  /*displays pop-up when "active" class is present*/
+  visibility: visible;
+  text-align: center;
+}
+
+
+
+button {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 15px;
+  margin: .20rem;
+  font-size: 1rem;
+  color: #111;
+  background: snow;
+  border: 2px solid #111;
+  padding: 2px;
+  transition: 0s; /* Can cause issues with alert()*/
+}
+
+button:hover {
+  letter-spacing: 3px;
+  padding: 6px;
+  background-color: #445decbd;
+  transition: 0s; (/* Can cause issues with alert()*/)
+}
+/**** @open ****/
+div.popup-overlay.html-pop.active {
+  width: 280px;
+  height: 160px;
+}
+
+#error-message {
+  font-family: fantasy, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: snow;
+}
+
+#del-message {
+  font-family: fantasy, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: snow;
+}
+/***************form validations******************************/
+.message {
+text-align: center;
+color: #ffc107;
+}
+/* auto-fill atttributes */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: burlywood;
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  background-color: transparent;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/***********************************************/
+
+.form-control {
+	margin-bottom: 0px;
+	padding-bottom: 10px;
+	position: relative;
+}
+.form-control input{
+	border-color: burlywood;
+  color: burlywood;
+
+}
+.form-control.success input{
+	border-color: #1ecc2c;
+  color: #9cbb9f;
+  -webkit-text-fill-color: #9cbb9f;
+}
+.form-control.notif input {
+	color: #fdd867;
+  border-color: #ffc107;
+  -webkit-text-fill-color: #fdd867;
+}
+.form-control.error input {
+	border-color: #e73c45;
+  color: #ddadb0;
+  -webkit-text-fill-color: #ddadb0;
+}
+.form-control small {
+  color: burlywood;
+  position: absolute;
+	bottom: 10px;
+	left: 0;
+	visibility: visible;
+}
+.form-control.success small {
+	color: #1ecc2c;
+	visibility: visible;
+}
+.form-control.notif small {
+	color: #ffc107;
+	visibility: visible;
+}
+.form-control.error small {
+	color: #e74c3c;
+	visibility: visible;
+}
